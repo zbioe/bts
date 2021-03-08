@@ -1,0 +1,64 @@
+#+TITLE: Check
+
+* From Buff.163
+https://buff.163.com/market/?game=csgo#tab=buying&page_num=1
+https://buff.163.com/market/?game=csgo#tab=selling&page_num=1
+
+
+https://buff.163.com/market/goods?goods_id=774894&from=market#tab=buying
+
+<span id=buy_num>58</span>
+data-goods-sell-min-price="558" data-goods-buy-max-price="520"
+
+<small class="hide-usd">($ 1.21)</small></strong></span> </span> <a href="https://steamcommunity.com/market/listings/730/Blackwolf%20%7C%20Sabre" target="_blank">查看Steam市场<i class="icon icon_arr_right_small"></i>
+
+<li class="selling on "><a href="javascript:;">当前在售(1000+)<i class="icon icon_top_cur"></i></a></li> <li class="buying"><a href="javascript:;">当前求购(<span id="buy_num">58</span>)
+
+ <a href="javascript:" class="i_Btn btn-supply-sell" data-goodsid="774894" data-price="<%= item.price %>" data-orderid="<%= item.id %>" data-buyerid="<%= user_infos[item.user_id].user_id %>" data-goods-name="黑狼 | 军刀" data-goods-sell-min-price="558" data-goods-buy-max-price="520" data-goods-icon-url="<%= item.icon_url %>" data-goods-market-hash-name="Blackwolf | Sabre" data-remain-num="<%= item.num - item.frozen_num - item.real_num %>" data-goods-rarity='{"category": "rarity", "internal_name": "legendary_character", "localized_name": "legendary_character"}' data-specific="<%= item.specific %>" data-can-inspect="true" data-can-3d-inspect="false">供应</a>
+
+https://buff.163.com/market/goods?goods_id=774894&from=market#tab=selling
+
+view steam market https://steamcommunity.com/market/listings/730/Blackwolf%20%7C%20Sabre
+
+https://buff.163.com/api/market/goods/sell_order?game=csgo&goods_id=774894&page_num=1&sort_by=default&mode=&allow_tradable_cooldown=1&_=1612615547457shoul
+* From Steam
+https://steamcommunity.com/market/priceoverview/?appid=730&currency=3&market_hash_name=Blackwolf%20%7C%20Sabre
+
+https://steamcommunity.com/market/priceoverview/?appid=730&currency=3&market_hash_name=StatTrak%E2%84%A2%20Negev%20%7C%20Man-o%27-war%20%28Minimal%20Wear%29
+
+{"success":true,"lowest_price":"0,47€","volume":"101","median_price":"0,42€"}
+Glock-18 | Bullet Queen (Minimal Wear)
+https://steamcommunity.com/market/listings/730/StatTrak%E2%84%A2%20Negev%20%7C%20Man-o%27-war%20%28Minimal%20Wear%29
+https://steamcommunity.com/market/listings/730/Glock-18%20%7C%20Bullet%20Queen%20%28Minimal%20Wear%29
+
+https://steamcommunity.com/market/listings/730/Negev (StatTrak™) | Man-o'-war
+Negev (StatTrak™) | Man-o'-war
+https://steamcommunity.com/market/listings/730/StatTrak%E2%84%A2%20Negev%20%7C%20Man-o%27-war%20%28Minimal%20Wear%29
+
+https://steamcommunity.com/market/priceoverview/?appid=730&currency=3&market_hash_name=StatTrak%E2%84%A2%20Negev%20%7C%20Man-o%27-war%20%28Minimal%20Wear%29
+
+view-source:https://steamcommunity.com/market/listings/730/StatTrak%E2%84%A2%20Negev%20%7C%20Man-o%27-war%20%28Minimal%20Wear%29
+Market_LoadOrderSpread( 40091996 );
+40091996
+
+https://steamcommunity.com/market/itemordershistogram?country=BR&language=brazilian&currency=1&item_nameid=40091996&two_factor=0
+
+
+* Workflow
+incremental em cima do goods_id.
+https://buff.163.com/market/goods?goods_id=774894&from=market#tab=buying
+Vai um por um, parseando os dados das páginas
+blacklista aqueles que não encontrar nada
+
+Vai para a URL da steam
+
+** Dados Buff
+- nome do jogo
+- max price
+- min price
+- buy number
+- sell number
+- url da steam com o nome referência do item
+
+
+
